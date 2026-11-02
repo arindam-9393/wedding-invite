@@ -200,7 +200,7 @@ export function Title() {
         <Divider />
       </motion.div>
       <motion.p className="title-names" variants={reveal}>
-        {invite.groom.name} <em>&amp;</em> {invite.bride.name}
+        {invite.bride.name} <em>&amp;</em> {invite.groom.name}
       </motion.p>
     </Panel>
   )
@@ -256,9 +256,9 @@ export function Couple() {
       scene={<Scene chhatris pond={false} />}
     >
       <motion.h2 className="name" variants={stagger(0, 0)}>
-        <SplitText text={invite.groom.name.toUpperCase()} />
+        <SplitText text={invite.bride.name.toUpperCase()} />
       </motion.h2>
-      {invite.groom.lines.map((l) => (
+      {invite.bride.lines.map((l) => (
         <motion.p key={l} className="family" variants={reveal}>
           {l}
         </motion.p>
@@ -268,9 +268,9 @@ export function Couple() {
         <span>with</span>
       </motion.div>
       <motion.h2 className="name" variants={stagger(0, 0)}>
-        <SplitText text={invite.bride.name.toUpperCase()} />
+        <SplitText text={invite.groom.name.toUpperCase()} />
       </motion.h2>
-      {invite.bride.lines.map((l) => (
+      {invite.groom.lines.map((l) => (
         <motion.p key={l} className="family" variants={reveal}>
           {l}
         </motion.p>
@@ -362,7 +362,7 @@ export function Closing() {
         {invite.closing.from}
       </motion.p>
       <motion.p className="closing-sign gold-text" variants={reveal}>
-        {invite.groom.name} &amp; {invite.bride.name}
+        {invite.bride.name} &amp; {invite.groom.name}
       </motion.p>
     </Panel>
   )

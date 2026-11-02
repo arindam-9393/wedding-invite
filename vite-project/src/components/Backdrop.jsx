@@ -38,8 +38,8 @@ export default function Backdrop({ show }) {
       animate={{ opacity: show ? 1 : 0 }}
       transition={{ duration: 1.6, delay: show ? 0.8 : 0 }}
     >
-      <Side side="left" name={invite.groom.name} />
-      <Side side="right" name={invite.bride.name} />
+      <Side side="left" name={invite.bride.name} />
+      <Side side="right" name={invite.groom.name} />
     </motion.div>
   )
 }

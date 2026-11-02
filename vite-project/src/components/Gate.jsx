@@ -52,12 +52,12 @@ export default function Gate({ onOpen, onDone }) {
         transition={{ duration: opening ? 0.6 : 1.4, ease: 'easeOut' }}
       >
         <div className="gate-monogram">
-          <span>{invite.groom.name[0]}</span>
-          <i>&amp;</i>
           <span>{invite.bride.name[0]}</span>
+          <i>&amp;</i>
+          <span>{invite.groom.name[0]}</span>
         </div>
         <p className="gate-names">
-          {invite.groom.name} <em>weds</em> {invite.bride.name}
+          {invite.bride.name} <em>weds</em> {invite.groom.name}
         </p>
         {/* clicks bubble up to the gate's handler */}
         <button type="button" className="gate-button">

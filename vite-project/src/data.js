@@ -8,14 +8,15 @@ export const invite = {
 
   hosts: {
     blessing: 'With the blessings of God',
-    parents: 'Smt. Sumita De & Shri Supriya De',
+    parents: 'Smt. Sushmita Dilip Bose & Shri Dilip Ranjit Bose',
     request:
-      'request your gracious presence on the auspicious occasion of the Wedding Ceremony of their Son',
+      'request your gracious presence on the auspicious occasion of the Wedding Ceremony of their Daughter',
   },
 
   groom: {
     name: 'Saptarshi',
     lines: [
+      'S/o Smt. Sumita De & Shri Supriya De',
       'Grand S/o Late Asoke Kumar De & Late Ila De,',
       'Shri Tapan Kumar Saha & Smt. Manju Saha',
     ],
@@ -50,7 +51,7 @@ export const invite = {
 
   closing: {
     line: 'Your presence and blessings will make our celebration complete',
-    from: 'With love, The De & Bose Families',
+    from: 'With love, The Bose Family',
   },
 }
 
@@ -60,7 +61,7 @@ const toCalStamp = (iso) => new Date(iso).toISOString().replace(/[-:]/g, '').rep
 
 export const calendarUrl =
   'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-  `&text=${encodeURIComponent(`${invite.groom.name} & ${invite.bride.name} — ${invite.event.title}`)}` +
+  `&text=${encodeURIComponent(`${invite.bride.name} & ${invite.groom.name} — ${invite.event.title}`)}` +
   `&dates=${toCalStamp(invite.event.startISO)}/${toCalStamp(invite.event.endISO)}` +
   `&location=${encodeURIComponent(`${invite.venue.name}, ${invite.venue.address.join(', ')}`)}` +
   `&details=${encodeURIComponent('We would be honoured by your presence.')}`
