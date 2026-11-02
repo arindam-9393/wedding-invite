@@ -9,7 +9,7 @@ import { Invocation, Title, Blessings, Couple, EventDetails, Closing } from './c
 import './App.css'
 
 // Drop an mp3 at public/music.mp3 and it will play once the doors open.
-const MUSIC_SRC = '/music.mp3'
+const MUSIC_SRC = `${import.meta.env.BASE_URL}music.mp3`
 
 function MusicToggle({ audioRef, playing, setPlaying }) {
   const toggle = () => {
